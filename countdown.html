@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeGuard — Pause</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <!-- Timer Section -->
+      <div class="timer-section">
+        <div class="timer-ring">
+          <svg class="progress-ring" width="280" height="280">
+            <circle
+              class="progress-ring-bg"
+              stroke="#1c1c1f"
+              stroke-width="4"
+              fill="transparent"
+              r="134"
+              cx="140"
+              cy="140"
+            />
+            <circle
+              class="progress-ring-circle"
+              stroke="#c9a227"
+              stroke-width="4"
+              fill="transparent"
+              r="134"
+              cx="140"
+              cy="140"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div class="timer-display">
+            <span class="timer-value" id="timerValue">30</span>
+            <span class="timer-label">seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-section">
+        <p class="destination">
+          <span class="destination-label">Waiting to access</span>
+          <span class="destination-url" id="destinationUrl">—</span>
+        </p>
+
+        <div class="stats-card" id="statsCard">
+          <div class="stats-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="stats-content">
+            <p class="stats-count" id="statsCount">—</p>
+            <p class="stats-message" id="statsMessage">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h3>Navigating away from this page will stop your countdown.</h3>
+      <br/>
+      <p>TimeGuard is helping you be more intentional with your time.</p>
+    </footer>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>
+

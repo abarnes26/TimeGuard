@@ -1,0 +1,251 @@
+:root {
+  --bg-primary: #0a0a0b;
+  --bg-secondary: #141416;
+  --bg-tertiary: #1c1c1f;
+  --border-color: #2a2a2e;
+  --text-primary: #e8e8eb;
+  --text-secondary: #8b8b94;
+  --text-muted: #5c5c66;
+  --accent: #c9a227;
+  --accent-dim: rgba(201, 162, 39, 0.12);
+  --success: #3d9a50;
+  --warning: #d4a72c;
+  --danger: #d64545;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(201, 162, 39, 0.02) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Timer Section */
+.timer-section {
+  position: relative;
+}
+
+.timer-ring {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.5s ease;
+  transform-origin: center;
+}
+
+.timer-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-value {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.timer-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 8px;
+}
+
+/* Info Section */
+.info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.destination {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.destination-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.destination-url {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+/* Stats Card */
+.stats-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.stats-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-dim);
+  border-radius: 8px;
+  color: var(--accent);
+}
+
+.stats-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stats-count {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.stats-message {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Stats variants */
+.stats-card.excellent .stats-icon {
+  background: rgba(61, 154, 80, 0.12);
+  color: var(--success);
+}
+
+.stats-card.caution .stats-icon {
+  background: rgba(212, 167, 44, 0.12);
+  color: var(--warning);
+}
+
+.stats-card.warning .stats-icon {
+  background: rgba(214, 69, 69, 0.12);
+  color: var(--danger);
+}
+
+/* Footer */
+footer {
+  margin-top: 64px;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.timer-value.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Completion state */
+.container.completed .timer-value {
+  color: var(--success);
+}
+
+.container.completed .progress-ring-circle {
+  stroke: var(--success);
+}
+
+/* Responsive */
+@media (max-width: 360px) {
+  .timer-ring {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .progress-ring {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .progress-ring circle {
+    r: 114;
+    cx: 120;
+    cy: 120;
+  }
+  
+  .timer-value {
+    font-size: 56px;
+  }
+}
+
