@@ -2,7 +2,7 @@
 
 A Chrome browser extension that helps you be more intentional with your time by adding a mindful delay before accessing distracting websites.
 
-I stole this idea from (LeechBlock[https://chromewebstore.google.com/detail/leechblock-ng/blaaajhemilngeeffpbfkdjjoefldkok] and recreated the extension myself because, nothing against that developer but I don't trust anything anymore.
+I stole this idea from [LeechBlock](https://chromewebstore.google.com/detail/leechblock-ng/blaaajhemilngeeffpbfkdjjoefldkok) and recreated the extension myself because, nothing against that developer but I don't trust anything anymore.
 
 ## Features
 
