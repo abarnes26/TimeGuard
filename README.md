@@ -15,18 +15,13 @@ A Chrome browser extension that helps you be more intentional with your time by 
 
 ### Development Mode
 
-1. **Generate Icons** (requires Node.js):
-   ```bash
-   node generate-icons.js
-   ```
-
-2. **Load the Extension**:
+1. **Load the Extension**:
    - Open Chrome and navigate to `chrome://extensions/`
    - Enable "Developer mode" (toggle in top-right corner)
    - Click "Load unpacked"
    - Select the `LeechBlockExtension` folder
 
-3. **Configure**:
+2. **Configure**:
    - Click the TimeGuard icon in your browser toolbar
    - Add sites you want to block
    - Set your desired delay duration
