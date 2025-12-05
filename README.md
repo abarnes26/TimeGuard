@@ -2,9 +2,9 @@
 
 A Chrome browser extension that helps you be more intentional with your time by adding a mindful delay before accessing distracting websites.
 
-<img width="906" height="801" alt="Screenshot 2025-12-05 at 1 26 39 PM" src="https://github.com/user-attachments/assets/ebccbeb4-ea4c-473e-9fd0-ad7c5bacd7a0" />
+<img width="453" height="400" alt="Screenshot 2025-12-05 at 1 26 39 PM" src="https://github.com/user-attachments/assets/ebccbeb4-ea4c-473e-9fd0-ad7c5bacd7a0" />
 
-<img width="1075" height="810" alt="Screenshot 2025-12-05 at 1 26 58 PM" src="https://github.com/user-attachments/assets/c13125e5-07f8-4428-ab59-b09ec15f495b" />
+<img width="537" height="405" alt="Screenshot 2025-12-05 at 1 26 58 PM" src="https://github.com/user-attachments/assets/c13125e5-07f8-4428-ab59-b09ec15f495b" />
 
 
 ## Features
