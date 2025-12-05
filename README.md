@@ -2,8 +2,6 @@
 
 A Chrome browser extension that helps you be more intentional with your time by adding a mindful delay before accessing distracting websites.
 
-I stole this idea from [LeechBlock](https://chromewebstore.google.com/detail/leechblock-ng/blaaajhemilngeeffpbfkdjjoefldkok) and recreated the extension myself because, nothing against that developer but I don't trust anything anymore.
-
 ## Features
 
 - **Customizable Delay**: Set a waiting period (1-300 seconds) before accessing blocked sites
